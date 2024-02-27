@@ -71,16 +71,28 @@ const Home = () => {
                             <span className='grey-color fc-m support-text'>Supported by:</span>
                             <div className='os-container'>
                                 <div className='os-item'>
-                                    <img src= {winIco} width={24} alt='win icon'/>
-                                    <span className='fc-m white-color'>Windows</span>
+                                    <div>
+                                        <img src= {winIco} alt='win icon'/>
+                                    </div>
+                                    <div className='fc-m white-color'>
+                                        Windows
+                                    </div>
                                 </div>
                                 <div className='os-item'>
-                                    <img src= {linuxIco} width={24} alt='linux icon'/>
-                                    <span className='fc-m white-color'>Linux</span>
+                                    <div>
+                                        <img src= {linuxIco} alt='win icon'/>
+                                    </div>
+                                    <div className='fc-m white-color'>
+                                        Linux
+                                    </div>
                                 </div>
                                 <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
-                                    <img src= {macIco} width={24} alt='mac icon'/>
-                                    <span className='fc-m white-color'>MacOS</span>
+                                    <div>
+                                        <img src= {macIco} alt='win icon'/>
+                                    </div>
+                                    <div className='fc-m white-color'>
+                                        MacOS
+                                    </div>
                                     <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
                                 </div>
                             </div>
@@ -102,7 +114,7 @@ const Home = () => {
                         </p>
                         <div className="dropdown">
                             <div className="action-button download-button fc-l">
-                                <span>Not support on Android</span>
+                                <span>Not support on Mobile</span>
                             </div>
                             <div className="dropdown-content">
                                 <Download />
@@ -125,16 +137,28 @@ const Home = () => {
                         <span className='grey-color fc-m support-text'>Supported by:</span>
                         <div className='os-container'>
                             <div className='os-item'>
-                                <img src= {winIco} width={19} alt='win icon'/>
-                                <span className='fc-m white-color'>Windows</span>
+                                <div>
+                                    <img src= {winIco} alt='win icon'/>
+                                </div>
+                                <div className='fc-m white-color'>
+                                    Windows
+                                </div>
                             </div>
                             <div className='os-item'>
-                                <img src= {linuxIco} width={19} alt='linux icon'/>
-                                <span className='fc-m white-color'>Linux</span>
+                                <div>
+                                    <img src= {linuxIco} alt='win icon'/>
+                                </div>
+                                <div className='fc-m white-color'>
+                                    Linux
+                                </div>
                             </div>
                             <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
-                                <img src= {macIco} width={24} alt='mac icon'/>
-                                <span className='fc-m white-color'>MacOS</span>
+                                <div>
+                                    <img src= {macIco} alt='win icon'/>
+                                </div>
+                                <div className='fc-m white-color'>
+                                    MacOS
+                                </div>
                                 <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
                             </div>
                         </div>

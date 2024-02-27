@@ -42,7 +42,7 @@ const Header = () =>{
                             Install and Play now
                         </div>}
                         {mobileView && <div className="action-button download-button fc-l">    
-                            Not support on Android
+                            Not support on Mobile
                         </div>}
                         
                         <div className="dropdown-content">
