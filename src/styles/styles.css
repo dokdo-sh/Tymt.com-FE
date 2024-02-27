@@ -17,6 +17,7 @@ body {
     padding: 16px 24px 16px 24px;
     position: absolute;
     text-align: right;
+    z-index: 100;
     /* right: 200px; */
 }
 /* .feature-button-layout{
@@ -70,6 +71,7 @@ body {
     background-size: cover;
     display: flex;
     justify-content: center;
+    padding-top:150px;
 }
 .privacy-container, .terms-container{
     display: flex;
@@ -242,7 +244,10 @@ header {
     text-align: center;
     background-color: #EF4444;
     color: white;
-    /* min-height: 32px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 32px;
 }
 .header-container{
     display: flex;
@@ -319,7 +324,6 @@ header {
     /* background-image: url("../assets/logos/logo-transp.png"); */
     background-repeat: no-repeat;
     background-size: contain;
-    width: 174px;
     height: 65px;
     /* position: fixed; */
     /* left: 172px; */
@@ -343,18 +347,17 @@ header {
 }
 .header-button {
     z-index: 100000;
-    width: 144px;
-    height: 46px;
+    height: 55px;
     border: solid 1px #EF4444;
-    border-radius: 17px;
-    color: #52E1F2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
+    border-radius: 14px;
+    color: white;
+    font-size: 24px;
     text-align: center;
-    line-height: 46px;
+    font-weight: 400;
+    line-height: 35.14px;
     margin:5px;
+    padding: 0px 20px 0px 20px;
+    z-index: 0;
 }
 .header-button:hover {
     color: white;
@@ -374,19 +377,17 @@ header {
 }
 .download-button {
     z-index: 100000;
-    width: 144px;
-    height: 46px;
+    height: 55px;
     border: solid 1px #EF4444;
-    border-radius: 17px;
+    border-radius: 14px;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: 400;
     text-align: center;
-    line-height: 46px;
+    line-height: 34.15px;
     margin:5px;
     background-color: #EF4444;
+    padding: 0px 20px 0px 20px;
 }
 .download-button:hover {
     background-color: #992727;
@@ -466,8 +467,8 @@ header {
 }
 .color-about-title{
     text-align: left;
-    line-height: 0.7;
-    margin-bottom: 28px;
+    line-height: 0.6;
+    margin-bottom: 38px;
 }
 .about {
     color: white;
@@ -479,19 +480,55 @@ header {
     width: 50%;
     text-align: center;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    .solar-img{
+        width: 135%;
+        margin-right: -10%;
+    }
 }
-
+.support-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 300px;
+    margin-right: 0;
+    gap: 10px;
+    margin-top: 50px;
+}
+.os-container{
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    .os-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+}
 .about-title {
     text-align: center;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
     width: 50%;
+    p{
+        text-align: left;
+    }
 }
 
 .about-title-layout {
     position: relative;
     display: flex;
     justify-content: space-around;
-    padding: 25px;
+    /* padding: 25px; */
 }
 
 .about-description {
@@ -2072,12 +2109,17 @@ input[type=range]:focus::-ms-fill-upper {
     row-gap: 5px;
     flex: 1;
 }
-
+.footer-right{
+    max-width: 775px;
+    text-align: right;
+    line-height: 20px !important;
+}
 .footer-copyright {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 .footer-policy-tems {
@@ -2163,18 +2205,17 @@ input[type=range]:focus::-ms-fill-upper {
   
   .tooltip .tooltiptext {
     visibility: hidden;
-    padding: 0.25em 0.5em;
-    background-color: black;
+    background-color: #393939;
     color: #fff;
     text-align: center;
-    border-radius: 0.25em;
+    border-radius: 3rem !important;
     white-space: nowrap;
     position: absolute;
     z-index: 1;
-    top: 100%;
-    left: 30%;
+    top: -103%;
     transition-property: visibility;
     transition-delay: 0s;
+    padding: 8px 16px 8px 16px;
   }
   
   .tooltip:hover .tooltiptext {
@@ -2346,6 +2387,7 @@ input[type=range]:focus::-ms-fill-upper {
     .download-button{
         display: block;
     }
+    
     .home-logo {
         /* height: 1011px; */
         width: 1012px;
@@ -2616,32 +2658,32 @@ input[type=range]:focus::-ms-fill-upper {
         padding: 280px
     }
     .download-button{
-        display: none;
+        display: block;
+        height: 46px;
+        font-size: 18px !important;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-weight: 400;
     }
     .available {
         display: none;
     }
     .header-logo {
-        width: 174px;
         height: 65px;
         /* position: fixed;
         left: 82px; */
     }
 
-    .header-button {
-        width: 144px;
-        height: 46px;
-        /* position: fixed;
-        right: 80px;
-        top: 22px; */
-        border: solid 1px #EF4444;
-        border-radius: 17px;
-        color: #52E1F2;
-        display: flex;
-        justify-content: center;
-        font-size: 18px;
-        text-align: center;
-        line-height: 46px;
+    .about-title {
+        .header-button {
+            height: 55px;
+            position: unset;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 46px;
+            margin: auto;
+        }
     }
 
     /* .home-text-image {
@@ -2867,8 +2909,11 @@ input[type=range]:focus::-ms-fill-upper {
         width: 80%;
         top: 605px;
     }
-    .download-button{
+    .header-button-group > .header-button{
         display: none;
+    }
+    .header-button-group > .download-button{
+        display: block;
     }
     .features-title-layout {
         padding: 0px;
@@ -2882,6 +2927,9 @@ input[type=range]:focus::-ms-fill-upper {
 @media only screen and (max-width: 600px) {
     .header-nav{
         padding: 5px;
+        height: 52px;
+        font-size: 12px !important;
+        line-height: 14px !important;
     }
     .modal-body {
         margin-left: 5px;
@@ -2900,7 +2948,7 @@ input[type=range]:focus::-ms-fill-upper {
         margin-top: 0px;
     }
     .available-mobile{
-        display: block;
+        display: none;
     }
     .header-logo-image{
         width: 119px;
@@ -2917,6 +2965,10 @@ input[type=range]:focus::-ms-fill-upper {
         height: 460px;
         top: 350px;
         right: 0px;
+    }
+    .support-container {
+        max-width: 100%;
+        align-items: center;
     }
     .loader-sparkle-right {
         top: -200px;
@@ -2963,8 +3015,8 @@ input[type=range]:focus::-ms-fill-upper {
         height: auto;
         padding: 155px;
     }
-    .download-button{
-        display: none !important; 
+    .download .download-button{
+        display: block !important; 
     }
     .feature-row{
         width: 100%;
@@ -3035,21 +3087,38 @@ input[type=range]:focus::-ms-fill-upper {
         /* position: unset;
         left: 0; */
         margin-bottom: 10px;
-        /* margin: auto; */
+        margin-top: auto;
+        margin-bottom: auto;
     }
-    .header-button {
-        width: 144px;
-        height: 46px;
-        position: unset;
-        border: solid 1px #EF4444;
-        border-radius: 17px;
-        color: #52E1F2;
-        display: flex;
-        justify-content: center;
-        font-size: 18px;
-        text-align: center;
-        line-height: 46px;
-        margin: auto;
+    .mobile-bg{
+        background-image: url("../assets/images/temp-bg.svg");
+        position: absolute;
+        width: 100vw;
+        height: 830px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        bottom: -100px;
+        opacity: 0.4;
+    }
+    .home-section {
+        padding-top: 0;
+        /* background-image: url("../assets/images/temp-bg.svg");
+        background-position: bottom;
+        background-size: contain; */
+        background-image: unset;
+        position: relative;
+    }
+    .about-title {
+        .header-button {
+            height: 55px;
+            position: unset;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 46px;
+            margin: auto;
+        }
     }
 
     .icons-view {
@@ -3071,11 +3140,28 @@ input[type=range]:focus::-ms-fill-upper {
     }
     .about-title-layout {
         flex-direction: column;
-        padding: 140px 5px 10px 5px;
-        
+        padding: 140px 20px 10px 20px;
+        align-items: center;
+    }
+    .footer-right{
+        text-align: center;
     }
     .color-about-title{
         line-height: 0.8;
+        text-align: center;
+    }
+    p{
+        padding: 10px;
+    }
+    .about-title {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-top: 150px;
+    }
+    .developer-text{
+        text-align: center;
     }
     .about-solar-logo {
         width: 100%;
@@ -3249,7 +3335,9 @@ input[type=range]:focus::-ms-fill-upper {
     .revert {
         flex-direction: column-reverse
     }
-
+    .about-title p {
+        text-align: center;
+    }
     .features-right-light {
         top: 0px;
     }
