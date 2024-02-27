@@ -306,13 +306,13 @@ header {
     text-align: center;
     align-items: center;
     gap: 20px;
-    .os-item{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-    }
+}
+.os-container > .os-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
 .about-title {
     text-align: center;
