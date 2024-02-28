@@ -9,6 +9,7 @@ import Download from "../components/DownCmp";
 import winIco from "../assets/icons/win-icon.svg";
 import linuxIco from "../assets/icons/linux-icon.svg";
 import macIco from "../assets/icons/mac-icon.svg";
+import macIcoGray from "../assets/icons/mac-icon-gray.svg";
 const Home = () => {
     function changeView () {
         const { innerWidth: width, innerHeight: height } = window;
@@ -154,9 +155,9 @@ const Home = () => {
                             </div>
                             <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
                                 <div>
-                                    <img src= {macIco} alt='win icon'/>
+                                    <img src= {macIcoGray} alt='win icon'/>
                                 </div>
-                                <div className='fc-m white-color'>
+                                <div className='fc-m nav-color'>
                                     MacOS
                                 </div>
                                 <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
