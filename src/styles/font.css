@@ -39,26 +39,22 @@ h2 {
 .fc-s {
   font-size: 12px;
   font-family: "Cobe";
-  line-height: 2;
 }
 
 .fc-s2 {
   font-size: 14px;
   font-family: "Cobe";
-  line-height: 2;
 }
 
 .fc-m {
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Cobe";
-  line-height: 2;
   font-weight: 400;
 }
 
 .fc-m2 {
   font-size: 18px;
   font-family: "Cobe";
-  line-height: 22px;
 }
 
 .fc-m2-big {
@@ -76,7 +72,6 @@ h2 {
 .fc-l {
   font-size: 24px;
   font-family: "Cobe";
-  line-height: 2;
 }
 .fs-f-h{
   font-size: 44px;
@@ -165,11 +160,7 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
-  .fc-xl2-Italic {
-    font-size: 90px;
-    font-family: "CobeItalic";
-    font-weight: 500;
-  }
+  .fc-l {font-size: 18px;}
 }
 
 @media only screen and (max-width: 1350px) {
@@ -204,12 +195,20 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
+  .fc-xl2-Italic {
+    font-size: 90px;
+    font-family: "CobeItalic";
+    font-weight: 500;
+  }
+  .fs-p {
+    font-size: 16px;
+  }
   .fc-l-Italic {
     font-size: 24px;
     font-family: "CobeItalic";
   }
   .h2-italic {
-    font-size: 92px;
+    font-size: 64px;
   }
   h1 {
     font-family: "CobeItalic";
