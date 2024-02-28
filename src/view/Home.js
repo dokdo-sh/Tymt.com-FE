@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Tooltip } from 'react-tooltip'
-import "../styles/styles.css";
+// import "../styles/styles.css";
 import "../styles/font.css";
 import "../styles/colors.css";
 import solarImage from "../assets/images/temp-img.svg";
