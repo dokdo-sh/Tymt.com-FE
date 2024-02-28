@@ -125,10 +125,10 @@ const Home = () => {
                                 <img src= {linuxIco} width={19} alt='linux icon'/>
                                 <span className='fc-m white-color'>Linux</span>
                             </div>
-                            <div className='os-item tooltip'>
-                                <img src= {macIco} width={19} alt='mac icon'/>
+                            <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
+                                <img src= {macIco} width={24} alt='mac icon'/>
                                 <span className='fc-m white-color'>MacOS</span>
-                                <span className="tooltiptext fc-m">Coming Soon</span>
+                                <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
                             </div>
                         </div>
                     </div>
