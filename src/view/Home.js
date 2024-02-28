@@ -58,7 +58,7 @@ const Home = () => {
                         <p className='fs-p grey-color'>
                             If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
                         </p>
-                        <a className="action-button header-button fc-l" href = 'https://github.com/solar-network' target='_blank' rel="noreferrer">
+                        <a className="action-button header-button fc-l" href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                             <span>Developer GitHub</span>
                         </a>
                     </div>
@@ -113,14 +113,17 @@ const Home = () => {
                         <p className='fs-p white-color'>
                             We are developing the next generation Game Launcher that bridges the gaps between blockchain and traditional gaming.
                         </p>
-                        <div className="dropdown">
+                        <p className='fs-p white-color'>
+                            
+                        </p>
+                        {/* <div className="dropdown">
                             <div className="action-button download-button fc-l modal-button-disable">
-                                <span>Coming soon...</span>
+                                <span></span>
                             </div>
                             <div className="dropdown-content">
                                 <Download />
                             </div>
-                        </div> 
+                        </div>  */}
                     </div>
                     <div className="about-solar-logo">
                         <div className='solar-container'>
@@ -131,7 +134,7 @@ const Home = () => {
                     <p className='fs-p grey-color developer-text'>
                         If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
                     </p>
-                    <a className="action-button header-button fc-l" href = 'https://github.com/solar-network' target='_blank' rel="noreferrer">
+                    <a className="action-button header-button fc-l" href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                         <span>Developer GitHub</span>
                     </a>
                     <div className='support-container'>
