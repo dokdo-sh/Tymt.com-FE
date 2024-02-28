@@ -50,6 +50,8 @@ body {
     display: flex;
     justify-content: center;
     padding-top:150px;
+    min-height: calc( 100vh - 265px);
+    align-items: center;
 }
 .delayed-animation {
     animation-delay: 1s;
@@ -61,7 +63,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     width: 949px;
-    height: 1001px;
+    height: 790px;
     position: absolute;
     top: 200px;
     z-index: 0;
@@ -153,7 +155,7 @@ header {
     font-weight: 400;
     line-height: 35.14px;
     margin:5px;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 5px 20px;
     z-index: 0;
     display: flex;
     align-items: center;
@@ -187,7 +189,7 @@ header {
     line-height: 34.15px;
     margin:5px;
     background-color: #EF4444;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 5px 20px;
     display: flex;
     align-items: center;
 }
@@ -554,8 +556,6 @@ a:hover {
 .footer {
     width: 100%;
     color: white;
-    margin-top: 80px;
-    margin-bottom: 90px;
 }
 
 
@@ -570,7 +570,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .footer-right {
     line-height: 20px !important;
@@ -1020,7 +1020,7 @@ a:hover {
         padding-bottom: 0;
     }
     .footer-layout{
-        padding: 30px;
+        padding: 15px;
     }
     .revert {
         flex-direction: column-reverse
