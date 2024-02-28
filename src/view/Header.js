@@ -34,7 +34,7 @@ const Header = () =>{
                     <img src= {logo} className='header-logo-image' alt='logo'/>
                 </div>
                 <div className='header-button-group'>
-                    <a className="action-button header-button fc-l" href = 'https://github.com/solar-network' target='_blank' rel="noreferrer">
+                    <a className="action-button header-button fc-l" href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                         <span>Developer GitHub</span>
                     </a>
                     <div className="dropdown">
