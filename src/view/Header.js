@@ -23,11 +23,11 @@ const Header = () =>{
                     <img src= {logo} className='header-logo-image' alt='logo'/>
                 </div>
                 <div className='header-button-group col-lg-5 col-md-6 col-sm-6'>
-                    <a className={OS === "Windows OS" ? "action-button header-button-windows fc-l" : "action-button header-button fc-l"} href='https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
+                    <a className={os === "Windows OS" ? "action-button header-button-windows fc-l" : "action-button header-button fc-l"} href='https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                         <span>Developer GitHub</span>
                     </a>
                     <div className="dropdown">
-                        {!isMobile && <div className={OS === "Windows OS" ? "action-button download-button-windows fc-l":"action-button download-button fc-l"}>    
+                        {!isMobile && <div className={os === "Windows OS" ? "action-button download-button-windows fc-l":"action-button download-button fc-l"}>    
                             Install and Play now
                         </div>}
                         {/* {mobileView && <div className="download-button fc-l modal-button-disable">    

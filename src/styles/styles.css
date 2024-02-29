@@ -159,7 +159,7 @@ header {
     font-weight: 400;
     line-height: 35.14px;
     margin:5px;
-    padding: 0px 20px 5px 20px;
+    padding: 0px 20px 0px 20px;
     z-index: 0;
     display: flex;
     align-items: center;
@@ -220,7 +220,7 @@ header {
     line-height: 34.15px;
     margin:5px;
     background-color: #EF4444;
-    padding: 0px 20px 5px 20px;
+    padding: 0px 20px 0px 20px;
     display: flex;
     align-items: center;
     white-space: nowrap;
