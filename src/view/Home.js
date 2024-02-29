@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import { isMobile } from 'react-device-detect';
 import { Tooltip } from 'react-tooltip'
-// import "../styles/styles.css";
 import "../styles/font.css";
 import "../styles/colors.css";
 import blueImg from "../assets/images/temp-blue.svg";
@@ -8,9 +8,11 @@ import foxImg from "../assets/images/temp-fox.svg";
 import Download from "../components/DownCmp";
 import winIco from "../assets/icons/win-icon.svg";
 import linuxIco from "../assets/icons/linux-icon.svg";
-import macIco from "../assets/icons/mac-icon.svg";
 import macIcoGray from "../assets/icons/mac-icon-gray.svg";
+import { OS } from '../utils/getEnv';
+
 const Home = () => {
+    const [os] = useState(OS(window));
     function changeView () {
         const { innerWidth: width, innerHeight: height } = window;
         if(width <= 600 && height){
@@ -30,13 +32,11 @@ const Home = () => {
     }, []);
     return(
         <section id="home" className="home home-section">
-            <div className='mobile-bg'></div>
                 <div className="container ">
-                <div className="home-left-light blink"></div>
-                <div className="home-right-light blink delayed-animation"></div>
+                
                 {!mobileView && (
-                <div className={`about-title-layout`}>
-                    <div className="about-title">
+                <div className={`about-title-layout row`}>
+                    <div className="about-title col-lg-6 col-md-6">
                         <div className="color-about-title">
                             <span className="h2-italic white-color">Ready to</span>
                             <br />
@@ -47,22 +47,24 @@ const Home = () => {
                         <p className='fs-p white-color'>
                             We are developing the next generation Game Launcher that bridges the gaps between blockchain and traditional gaming.
                         </p>
-                        <div className="dropdown">
-                            <div className="action-button download-button fc-l">
+                        {!isMobile && <div className="dropdown">
+                            
+                            <div className={os === "Windows OS" ? "action-button download-button-windows fc-l":"action-button download-button fc-l"}>
                                 Install and Play now
                             </div>
                             <div className="dropdown-content">
                                 <Download />
                             </div>
-                        </div> 
+                        </div> }
+                        
                         <p className='fs-p grey-color'>
                             If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
                         </p>
-                        <a className="action-button header-button fc-l" href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
+                        <a className={os === "Windows OS" ? "action-button header-button-windows fc-l" : "action-button header-button fc-l"} href='https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                             <span>Developer GitHub</span>
                         </a>
                     </div>
-                    <div className="about-solar-logo">
+                    <div className="about-solar-logo col-lg-6 col-md-6">
                         <div className='solar-container'>
                             <img className="solar-img" alt="solar logo" src={blueImg} />
                             <img className='fox-img' alt='fox' src={foxImg}/>
@@ -87,7 +89,7 @@ const Home = () => {
                                         Linux
                                     </div>
                                 </div>
-                                <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
+                                <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="coming soon">
                                     <div>
                                         <img src= {macIcoGray} alt='win icon'/>
                                     </div>
