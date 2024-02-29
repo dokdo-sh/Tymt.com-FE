@@ -491,6 +491,12 @@ a:hover {
         display: none;
     }
 }
+@media only screen and (max-width: 1150px) {
+    .header-button-group>.header-button-windows{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     body{
         background-image: unset;
@@ -511,6 +517,9 @@ a:hover {
         line-height: 14px !important;
     }
     .download-button {
+        display: flex;
+    }
+    .download-button-windows {
         display: flex;
     }
     /* .tooltiptext {
@@ -587,6 +596,9 @@ a:hover {
         padding: 155px;
     }
     .download .download-button{
+        display: block !important; 
+    }
+    .download .download-button-windows{
         display: block !important; 
     }
     .feature-row{
@@ -681,6 +693,15 @@ a:hover {
     }
     .about-title {
         .header-button {
+            height: 55px;
+            position: unset;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 46px;
+            margin: auto;
+        }
+        .header-button-windows {
             height: 55px;
             position: unset;
             color: white;
