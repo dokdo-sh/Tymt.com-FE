@@ -10,6 +10,7 @@ import winIco from "../assets/icons/win-icon.svg";
 import linuxIco from "../assets/icons/linux-icon.svg";
 import macIcoGray from "../assets/icons/mac-icon-gray.svg";
 import { OS } from '../utils/getEnv';
+
 const Home = () => {
     const [os, setOs] = useState(OS(window));
     function changeView () {

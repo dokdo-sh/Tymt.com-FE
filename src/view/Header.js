@@ -1,19 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import { isMobile } from 'react-device-detect';
 import Download from "../components/DownCmp";
 import logo from "../assets/logos/logo-transp.png";
 // import available from "../assets/images/availe.svg";
 import available_mobile from "../assets/images/available-mobile.svg";
-import { OS, currentBrowser } from '../utils/getEnv';
+import { OS } from '../utils/getEnv';
 
 const Header = () =>{
     const navigate = useNavigate();
-    const [os, setOs] = useState(OS(window));
-    const [browser, setBrowser] = useState(currentBrowser(window));
-
-    useEffect(() => {
-    }, [os, browser])
+    const [os] = useState(OS(window));
     
     return(
         
