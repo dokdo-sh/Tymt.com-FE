@@ -76,7 +76,7 @@ const Home = () => {
                                     <div>
                                         <img src= {winIco} alt='win icon'/>
                                     </div>
-                                    <div className='fc-m white-color'>
+                                    <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : undefined}>
                                         Windows
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ const Home = () => {
                                     <div>
                                         <img src= {linuxIco} alt='win icon'/>
                                     </div>
-                                    <div className='fc-m white-color'>
+                                    <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : undefined}>
                                         Linux
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@ const Home = () => {
                                     <div>
                                         <img src= {macIcoGray} alt='win icon'/>
                                     </div>
-                                    <div className='fc-m nav-color'>
+                                    <div className='fc-m nav-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : undefined}>
                                         MacOS
                                     </div>
                                     <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
@@ -145,7 +145,7 @@ const Home = () => {
                                 <div>
                                     <img src= {winIco} alt='win icon'/>
                                 </div>
-                                <div className='fc-m white-color'>
+                                <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : undefined}>
                                     Windows
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ const Home = () => {
                                 <div>
                                     <img src= {linuxIco} alt='win icon'/>
                                 </div>
-                                <div className='fc-m white-color'>
+                                <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : undefined}>
                                     Linux
                                 </div>
                             </div>
@@ -161,7 +161,7 @@ const Home = () => {
                                 <div>
                                     <img src= {macIcoGray} alt='win icon'/>
                                 </div>
-                                <div className='fc-m nav-color'>
+                                <div className='fc-m nav-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : undefined}>
                                     MacOS
                                 </div>
                                 <Tooltip id="my-tooltip-inline" isOpen={true} className='tooltiptext fc-m' place={'bottom-start'} style={{ borderRadius: '30px'}} />
