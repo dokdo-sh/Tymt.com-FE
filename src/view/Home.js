@@ -88,7 +88,7 @@ const Home = () => {
                                         Linux
                                     </div>
                                 </div>
-                                <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming soon">
+                                <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="coming soon">
                                     <div>
                                         <img src= {macIcoGray} alt='win icon'/>
                                     </div>
@@ -157,7 +157,7 @@ const Home = () => {
                                     Linux
                                 </div>
                             </div>
-                            <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
+                            <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="coming soon...">
                                 <div>
                                     <img src= {macIcoGray} alt='win icon'/>
                                 </div>
