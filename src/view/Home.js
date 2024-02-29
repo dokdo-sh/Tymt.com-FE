@@ -12,7 +12,7 @@ import macIcoGray from "../assets/icons/mac-icon-gray.svg";
 import { OS } from '../utils/getEnv';
 
 const Home = () => {
-    const [os] = useState(OS(window));
+    const [os, setOs] = useState(OS(window));
     function changeView () {
         const { innerWidth: width, innerHeight: height } = window;
         if(width <= 600 && height){
@@ -60,7 +60,7 @@ const Home = () => {
                         <p className='fs-p grey-color'>
                             If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
                         </p>
-                        <a className={os === "Windows OS" ? "action-button header-button-windows fc-l" : "action-button header-button fc-l"} href='https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
+                        <a className={os === "Windows OS" ? "action-button header-button-windows fc-l" : "action-button header-button fc-l"} href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                             <span>Developer GitHub</span>
                         </a>
                     </div>
@@ -77,7 +77,7 @@ const Home = () => {
                                     <div>
                                         <img src= {winIco} alt='win icon'/>
                                     </div>
-                                    <div className='fc-m white-color'>
+                                    <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : {paddingTop: "8px"}}>
                                         Windows
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@ const Home = () => {
                                     <div>
                                         <img src= {linuxIco} alt='win icon'/>
                                     </div>
-                                    <div className='fc-m white-color'>
+                                    <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : {paddingTop: "8px"}}>
                                         Linux
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ const Home = () => {
                                     <div>
                                         <img src= {macIcoGray} alt='win icon'/>
                                     </div>
-                                    <div className='fc-m nav-color'>
+                                    <div className='fc-m nav-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : {paddingTop: "8px"}}>
                                         MacOS
                                     </div>
                                     <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
@@ -136,7 +136,7 @@ const Home = () => {
                     <p className='fs-p grey-color developer-text'>
                         If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
                     </p>
-                    <a className="action-button header-button fc-l" href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
+                    <a className={os === "Windows OS" ? "action-button header-button-windows fc-l" : "action-button header-button fc-l"} href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                         <span>Developer GitHub</span>
                     </a>
                     <div className='support-container'>
@@ -146,7 +146,7 @@ const Home = () => {
                                 <div>
                                     <img src= {winIco} alt='win icon'/>
                                 </div>
-                                <div className='fc-m white-color'>
+                                <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : {paddingTop: "8px"}}>
                                     Windows
                                 </div>
                             </div>
@@ -154,15 +154,15 @@ const Home = () => {
                                 <div>
                                     <img src= {linuxIco} alt='win icon'/>
                                 </div>
-                                <div className='fc-m white-color'>
+                                <div className='fc-m white-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : {paddingTop: "8px"}}>
                                     Linux
                                 </div>
                             </div>
-                            <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
+                            <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="coming soon...">
                                 <div>
                                     <img src= {macIcoGray} alt='win icon'/>
                                 </div>
-                                <div className='fc-m nav-color'>
+                                <div className='fc-m nav-color' style={os==="Windows OS" ? {paddingBottom: "8px"} : {paddingTop: "8px"}}>
                                     MacOS
                                 </div>
                                 <Tooltip id="my-tooltip-inline" isOpen={true} className='tooltiptext fc-m' place={'bottom-start'} style={{ borderRadius: '30px'}} />
