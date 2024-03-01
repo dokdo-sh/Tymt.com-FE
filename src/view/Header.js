@@ -28,12 +28,11 @@ const Header = () =>{
     }, []);
     return(
         <header className="header">
-            <div className='header-nav fc-m2 line-height-1-2'>Welcome to our temporary site!  We're currently in the process of developing a new and improved website to enhance your experience.</div>
-            <div className='header-container'>
-                <div className="header-logo" onClick={() => {navigate("/")}}>
+            <div className='row'>
+                <div className="header-logo col-lg-7 col-md-6 col-sm-6" onClick={() => {navigate("/")}}>
                     <img src= {logo} className='header-logo-image' alt='logo'/>
                 </div>
-                <div className='header-button-group'>
+                <div className='header-button-group col-lg-5 col-md-6 col-sm-6'>
                     <a className="action-button header-button fc-l" href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                         <span>Developer GitHub</span>
                     </a>

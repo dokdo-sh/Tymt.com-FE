@@ -32,11 +32,10 @@ const Home = () => {
         <section id="home" className="home home-section">
             <div className='mobile-bg'></div>
                 <div className="container ">
-                <div className="home-left-light blink"></div>
-                <div className="home-right-light blink delayed-animation"></div>
+                
                 {!mobileView && (
-                <div className={`about-title-layout`}>
-                    <div className="about-title">
+                <div className={`about-title-layout row`}>
+                    <div className="about-title col-lg-6 col-md-6">
                         <div className="color-about-title">
                             <span className="h2-italic white-color">Ready to</span>
                             <br />
@@ -62,7 +61,7 @@ const Home = () => {
                             <span>Developer GitHub</span>
                         </a>
                     </div>
-                    <div className="about-solar-logo">
+                    <div className="about-solar-logo col-lg-6 col-md-6">
                         <div className='solar-container'>
                             <img className="solar-img" alt="solar logo" src={blueImg} />
                             <img className='fox-img' alt='fox' src={foxImg}/>
