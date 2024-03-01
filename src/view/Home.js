@@ -57,7 +57,7 @@ const Home = () => {
                         <p className='fs-p grey-color'>
                             If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
                         </p>
-                        <a className="action-button header-button fc-l" href = 'https://github.com/solar-network' target='_blank' rel="noreferrer">
+                        <a className="action-button header-button fc-l" href = 'https://github.com/dokdo-sh/tymtLauncher' target='_blank' rel="noreferrer">
                             <span>Developer GitHub</span>
                         </a>
                     </div>
@@ -86,7 +86,7 @@ const Home = () => {
                                         Linux
                                     </div>
                                 </div>
-                                <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
+                                <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="coming soon">
                                     <div>
                                         <img src= {macIco} alt='win icon'/>
                                     </div>
