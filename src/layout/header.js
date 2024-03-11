@@ -14,6 +14,7 @@ import { OS } from "../utils/getEnv";
 import DownloadComp from "../components/downloadComp";
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [scroll, setScroll] = useState(false)
     const [osBtn, setOsBtn] = useState("common-btn-win");
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -27,8 +28,22 @@ const Header = () => {
             setOsBtn("common-btn-linux");
         }
     },os)
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setScroll(true);
+            } else {
+                setScroll(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
-        <Navbar variant="dark" expand="lg" className={`container header-container navbar-a ${isOpen ? 'active' : ''}`} expanded = {isOpen}>
+        <Navbar variant="dark" expand="lg" className={`container header-container navbar-a ${isOpen ? 'active' : ''} ${scroll? 'scroll-header': ''}`} expanded = {isOpen}>
             {/* <div className='row'> */}
                 <Navbar.Brand as={Link} to="/">
                     <img
@@ -46,16 +61,16 @@ const Header = () => {
                     {/* </div> */}
                     {/* <div className='d-flex justify-content-end col-6'> */}
                         
-                        <Nav.Link as={Link} onClick={toggleNavbar} to="/" className={`${osBtn} black-btn fs-18 btn bold-semi white m-lr-10`}>
+                        <Nav.Link as={Link} onClick={toggleNavbar} to="/" className={`${osBtn} black-btn fs-18 header-btn bold-semi white m-lr-10`}>
                             Contact Us
                         </Nav.Link>
                         
                         {!isMobile && 
-                            <Nav.Link as={Link} onClick={toggleNavbar} to="/" className={`${osBtn} download-btn btn red-btn fs-18 bold-semi white m-lr-10`}>
+                            <Nav.Link as={Link} onClick={toggleNavbar} to="/" className={`${osBtn} download-btn header-btn red-btn fs-18 bold-semi white m-lr-10`}>
                                 Install and Play now
-                                <div className="dropdown-content">
+                                {/* <div className="dropdown-content">
                                     <DownloadComp />
-                                </div>
+                                </div> */}
                             </Nav.Link>
                         }
                     {/* </div> */}
