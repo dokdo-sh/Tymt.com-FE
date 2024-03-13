@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className="row m-t-20">
                 <div className="col-lg-6 col-md-6 col-sm-12 fs-16 gray footer-right content-center">
-                    ©2024. All right reserved.
+                    ©2024. All rights reserved.
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 d-flex content-center footer-terms">
                     <a href = "https://solar.network/terms-and-conditions" target="_blank" rel="noreferrer"  className="fs-16 gray m-lr-10">Privacy Policy</a>
