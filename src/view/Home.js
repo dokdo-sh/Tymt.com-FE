@@ -1,172 +1,108 @@
 import React, {useEffect, useState} from 'react';
-import { Tooltip } from 'react-tooltip'
-// import "../styles/styles.css";
-import "../styles/font.css";
-import "../styles/colors.css";
-import blueImg from "../assets/images/temp-blue.svg";
-import foxImg from "../assets/images/temp-fox.svg";
-import Download from "../components/DownCmp";
-import winIco from "../assets/icons/win-icon.svg";
-import linuxIco from "../assets/icons/linux-icon.svg";
-import macIco from "../assets/icons/mac-icon.svg";
-const Home = () => {
-    function changeView () {
-        const { innerWidth: width, innerHeight: height } = window;
-        if(width <= 600 && height){
-            return true;
-        }else{
-            return false;
-        }
-        
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import 'swiper/css';
+
+import { OS } from '../utils/getEnv';
+import { isMobile } from 'react-device-detect';
+import DownloadComp from '../components/downloadComp';
+import {benefitsEn, benefitsJp} from '../config/benefits';
+import { replaceStr } from '../utils/helper';
+import HeaderCard from '../components/headerCard';
+import redImg from "../assets/images/red-effect.png";
+import { getLang } from '../utils/languageSlice';
+function getCarousel () {
+    const { innerWidth: width, innerHeight: height } = window;
+    if( 768 < width && width <= 1200 && height){
+        return {carousel:true, preview:2};
+    }else if( width < 768 && height){
+        return {carousel:true, preview:1};
+    }else{
+        return {carousel:false, preview:0};
     }
-    const [mobileView, setMobileView] = useState(changeView());
+    
+}
+const HomeSection = () => {
+    const [os] = useState(OS(window));
+    const [osBtn, setOsBtn] = useState("common-btn-win");
+    const [carousel, setCarousel] = useState(false);
+    const [data, setData] = useState(benefitsEn);
+    const [preview, setPreview] = useState();
+    const {t} = useTranslation();
+    const lang = useSelector(getLang);
+    useEffect(()=>{
+        
+        if(lang==="en"){
+            setData(benefitsEn);
+        }else{
+            setData(benefitsJp);
+        }
+        if(os==="Windows OS"){
+            setOsBtn("common-btn-win");
+        }else{
+            setOsBtn("common-btn-linux");
+        }
+    },[os, lang]);
     useEffect(() => {
+        const {carousel, preview} = getCarousel();
+        setCarousel(carousel);
+        setPreview(preview);
         function handleResize() {
-            setMobileView(changeView());
+            const {carousel, preview} = getCarousel();
+            setCarousel(carousel);
+            setPreview(preview);
         }
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
     return(
         <section id="home" className="home home-section">
-            <div className='mobile-bg'></div>
-                <div className="container ">
-                <div className="home-left-light blink"></div>
-                <div className="home-right-light blink delayed-animation"></div>
-                {!mobileView && (
-                <div className={`about-title-layout`}>
-                    <div className="about-title">
-                        <div className="color-about-title">
-                            <span className="h2-italic white-color">Ready to</span>
-                            <br />
-                            <span className="h2-italic white-color" style={{whiteSpace: "nowrap"}}>explore</span>
-                            <br/>
-                            <span className="h2-italic blue-color">tymt?</span>
+            <div className='red-effect'><img src={redImg} alt='red effect'/></div>
+            <div className='mac-img'></div>
+            <div className='container flex-colum' style={{position:'relative', zIndex:10}}>
+                <div className='row detail-container'>
+                    <div className='col-12'>
+                        <div className='description'>
+                            <div className='fs-96 bold italic white nowrap'>{t("welcome-to")}</div> 
+                            <span className='fs-96 bold italic blue nowrap'>{t("the-future")}</span>
+                            <span className='fs-96 bold italic white nowrap'> {t("of")}</span>
+                            <div className='fs-96 bold italic white nowrap'>{t("gaming")}!</div> 
                         </div>
-                        <p className='fs-p white-color'>
-                            We are developing the next generation Game Launcher that bridges the gaps between blockchain and traditional gaming.
-                        </p>
-                        <div className="dropdown">
-                            <div className="action-button download-button fc-l">
-                                Install and Play now
-                            </div>
-                            <div className="dropdown-content">
-                                <Download />
-                            </div>
-                        </div> 
-                        <p className='fs-p grey-color'>
-                            If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
-                        </p>
-                        <a className="action-button header-button fc-l" href = 'https://github.com/solar-network' target='_blank' rel="noreferrer">
-                            <span>Developer GitHub</span>
-                        </a>
-                    </div>
-                    <div className="about-solar-logo">
-                        <div className='solar-container'>
-                            <img className="solar-img" alt="solar logo" src={blueImg} />
-                            <img className='fox-img' alt='fox' src={foxImg}/>
+                        <div className='fs-20 white m-tb-20' style={{maxWidth: '550px'}}>
+                            {replaceStr(t("home-detail"))}
                         </div>
-                        
-                        <div className='support-container'>
-                            <span className='grey-color fc-m support-text'>Supported by:</span>
-                            <div className='os-container'>
-                                <div className='os-item'>
-                                    <div>
-                                        <img src= {winIco} alt='win icon'/>
-                                    </div>
-                                    <div className='fc-m white-color'>
-                                        Windows
-                                    </div>
-                                </div>
-                                <div className='os-item'>
-                                    <div>
-                                        <img src= {linuxIco} alt='win icon'/>
-                                    </div>
-                                    <div className='fc-m white-color'>
-                                        Linux
-                                    </div>
-                                </div>
-                                <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
-                                    <div>
-                                        <img src= {macIco} alt='win icon'/>
-                                    </div>
-                                    <div className='fc-m white-color'>
-                                        MacOS
-                                    </div>
-                                    <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
+                        {!isMobile && 
+                            <div className={`${osBtn} download-btn red-btn fs-18 bold-semi white`}>
+                                {t("install-and-play-now")}
+                                <div className="dropdown-content">
+                                    <DownloadComp />
                                 </div>
                             </div>
-                        </div>
+                        }
                     </div>
                 </div>
-                )}
-                {mobileView && (<>
-                    <div className="about-title">
-                        <div className="color-about-title">
-                            <span className="h2-italic white-color">Ready to</span>
-                            <br />
-                            <span className="h2-italic white-color" style={{whiteSpace: "nowrap"}}>explore</span>
-                            <br/>
-                            <span className="h2-italic blue-color">tymt?</span>
+                <div className='row card-container'>
+                    {!carousel && data.map((item, index)=> (
+                        <div className='col-3' key={index}>
+                            <HeaderCard data={item} index = {index}/>
                         </div>
-                        <p className='fs-p white-color'>
-                            We are developing the next generation Game Launcher that bridges the gaps between blockchain and traditional gaming.
-                        </p>
-                        <div className="dropdown">
-                            <div className="action-button download-button fc-l modal-button-disable">
-                                <span>Coming soon...</span>
-                            </div>
-                            <div className="dropdown-content">
-                                <Download />
-                            </div>
-                        </div> 
-                    </div>
-                    <div className="about-solar-logo">
-                        <div className='solar-container'>
-                            <img className="solar-img" alt="solar logo" src={blueImg} />
-                            <img className='fox-img' alt='fox' src={foxImg}/>
-                        </div>
-                    </div>
-                    <p className='fs-p grey-color developer-text'>
-                        If you are a developer and want to create or publish a game using the benefits of the Solar blockchain - check out our GitHub documentation.
-                    </p>
-                    <a className="action-button header-button fc-l" href = 'https://github.com/solar-network' target='_blank' rel="noreferrer">
-                        <span>Developer GitHub</span>
-                    </a>
-                    <div className='support-container'>
-                        <span className='grey-color fc-m support-text'>Supported by:</span>
-                        <div className='os-container'>
-                            <div className='os-item'>
-                                <div>
-                                    <img src= {winIco} alt='win icon'/>
-                                </div>
-                                <div className='fc-m white-color'>
-                                    Windows
-                                </div>
-                            </div>
-                            <div className='os-item'>
-                                <div>
-                                    <img src= {linuxIco} alt='win icon'/>
-                                </div>
-                                <div className='fc-m white-color'>
-                                    Linux
-                                </div>
-                            </div>
-                            <div className='os-item' data-tooltip-id="my-tooltip-inline" data-tooltip-content="Coming Soon...">
-                                <div>
-                                    <img src= {macIco} alt='win icon'/>
-                                </div>
-                                <div className='fc-m white-color'>
-                                    MacOS
-                                </div>
-                                <Tooltip  id="my-tooltip-inline" className='tooltiptext fc-m' style={{borderRadius: '30px'}}/>
-                            </div>
-                        </div>
-                    </div>
-                </>)}
+                    ))}
+                    
+                </div>
             </div>
-            </section>
+            {carousel && (
+                <Swiper slidesPerView={preview} spaceBetween={30} centeredSlides={true} pagination={{ clickable: true, }} loop={true}>
+                    {
+                        data.map((item, index)=> (
+                            <SwiperSlide key={index}>
+                                <HeaderCard data={item} index = {index}/>
+                            </SwiperSlide>
+                        ))
+                    }
+            </Swiper>)}
+        </section>
     )
 }
 
-export default Home;
+export default HomeSection;
