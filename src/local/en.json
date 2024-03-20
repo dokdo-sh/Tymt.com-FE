@@ -15,6 +15,8 @@
     "publish-your-game": "Publish your game",
     "district-detail": "Unleash your creativity in a world where every action counts! District 53 Metaverse is a voxel-based online world, where blockchain meets mining, crafting, and building. With integration into the Solar Blockchain, every move you make earns you SXP, turning your adventures into tangible rewards. Survival, Creative and PvP modes available!",
     "more-games": "More Games are on the way",
+    "comming-detail-1" : "We are constantly searching for new games, new partners and studios.",
+    "comming-detail-2": "If you want your game listed on tymt - Contact us!",
     "your-launcher": "Your Launcher",
     "your-wallet": "Your Wallet",
     "wallet-detail-1": "In order to enjoy all the benefits of Web3 gaming - you need a “blockchain id” - an “address” - just like you do when you install a ",
@@ -30,10 +32,10 @@
     "for-publishers": "For publishers",
     "and-developers": "and developers",
     "publisher-detail": "Our mission is to bridge, connect and empower Gamers, Developers and Game Publishers - we think in terms of Community, rather than Competition. If you want to reach a new community of potential gamers - publish your game on tymt !",
-    "if-you-are-a-publisher": "If you are a Publisher.",
-    "publisher-contact": "Simply contact us and publish your game",
-    "if-you-are-a-developer": "If you are a Developer.",
-    "developer-contact": "Visit our GitHub repository for all documentation and SDK",
+    "if-you-are-a-publisher": "If you are a Publisher",
+    "publisher-contact": "Simply contact us and publish your game.",
+    "if-you-are-a-developer": "If you are a Developer",
+    "developer-contact": "Visit our GitHub repository for all documentation and SDK.",
     "go-to-github": "Go to GitHub",
     "right": "©2024. All rights reserved.",
     "privacy": "Privacy Policy",
@@ -49,7 +51,7 @@
     "gerneral-inquiry": "General inquiry",
     "download-for-linux": "Download for Linux",
     "download-for-windows": "Download for Windows",
-    "download-for-mac" : "Download for Mac",
+    "download-for-mac" : "Download for macOS",
     "jap": "Jap"
   }
 }
